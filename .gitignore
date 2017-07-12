@@ -3,3 +3,5 @@ node_modules
 .vscode
 files
 koa-api-recorder
+.nyc_output
+coverage

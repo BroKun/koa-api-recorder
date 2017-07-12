@@ -4,7 +4,8 @@
   "description": "暗中观察，记录api表现",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -t 10000 --require intelli-espower-loader --recursive"
+    "test": "nyc npm run test-base",
+    "test-base": "mocha -t 10000 --require intelli-espower-loader --recursive"
   },
   "dependencies": {
     "koa-unless": "^1.0.7",
@@ -13,12 +14,20 @@
   "devDependencies": {
     "koa2": "^2.0.0-alpha.7",
     "koa-bodyparser": "^2.2.0",
+    "nyc": "10.1.2",
     "eslint": "^3.3.1",
     "eslint-config-egg": "^5.0.0",
     "intelli-espower-loader": "^1.0.1",
     "mocha": "^3.4.2",
     "power-assert": "^1.4.4",
     "supertest": "^3.0.0"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "report-dir": "./coverage"
   },
   "engines": {
     "node": ">= 7.6.0"
