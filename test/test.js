@@ -13,7 +13,7 @@ const getHttp = require('http').Server;
 const app = new koa();
 const server = getHttp(app.callback());
 app.use(bodyParser());
-app.use(recorder({ dirPath: path.join(__dirname, '../files'), postMan: true }));
+app.use(recorder({ dirPath: path.join(__dirname, '../'), postMan: true }));
 app.use(async (ctx, next) => {
   ctx.body = { test: 'test body' };
   await next();
