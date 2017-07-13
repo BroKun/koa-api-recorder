@@ -2,7 +2,7 @@
   "name": "koa-api-recorder",
   "version": "1.0.0",
   "description": "暗中观察，记录api表现",
-  "main": "index.js",
+  "main": "./lib",
   "scripts": {
     "test": "nyc npm run test-base",
     "test-base": "mocha -t 10000 --require intelli-espower-loader --recursive"

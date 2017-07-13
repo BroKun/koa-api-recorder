@@ -1,7 +1,7 @@
 'use strict';
 
 const koa = require('koa2');
-const recorder = require('../index');
+const recorder = require('../lib');
 const path = require('path');
 const request = require('supertest');
 const assert = require('assert');
