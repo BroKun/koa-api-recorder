@@ -57,4 +57,5 @@ function recorder({ dirPath, postMan }) {
   return midware;
 }
 
+console.log('演示');
 module.exports = recorder;
